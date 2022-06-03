@@ -50,6 +50,7 @@ p {
 }
 
 .card {
+    position: relative;
     border-radius: 8px;
     margin: 90px 24px;
     width: 327px;
@@ -64,7 +65,19 @@ p {
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
     margin-bottom: 37px;
-    box-shadow: 2px 2px 2px 2px var(--clr-very-dark-blue)
+    box-shadow: 2px 2px 2px 2px var(--clr-very-dark-blue);
+}
+
+.overlay {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: #AB5CDB;
+    opacity: 0.5;
+    height: 238px;
+    width: 327px;
 }
 
 .card__title {
@@ -142,6 +155,13 @@ p {
     }
 
     .card__image {
+        width: 540px;
+        height: 446px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .overlay {
         width: 540px;
         height: 446px;
         border-top-left-radius: 0px;
