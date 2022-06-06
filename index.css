@@ -20,10 +20,14 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0;
     padding: 0;
     font-size: 15px;
     font-family: var(--ff-inter);
+    min-height: 100vh;
 }
 
 figure {
@@ -41,12 +45,16 @@ p {
     padding: 0;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .card {
@@ -66,6 +74,7 @@ p {
     border-top-left-radius: 8px;
     margin-bottom: 37px;
     box-shadow: 2px 2px 2px 2px var(--clr-very-dark-blue);
+    opacity: 0.7;
 }
 
 .overlay {
@@ -75,9 +84,10 @@ p {
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
     background-color: #AB5CDB;
-    opacity: 0.5;
     height: 238px;
     width: 327px;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
 }
 
 .card__title {
@@ -121,6 +131,18 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.card__stats-list {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card__stats-list-item {
+    margin: 0.5em 0;
 }
 
 .card__stats-container {
@@ -192,6 +214,12 @@ p {
         justify-content: space-between;
         width: 374px;
         margin-left: 72px;
+    }
+
+    .card__stats-list {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between
     }
 
     .card__stats-header {
